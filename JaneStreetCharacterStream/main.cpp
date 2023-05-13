@@ -6,9 +6,24 @@
 //
 
 #include <iostream>
+#include <string>
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    string next;
+    string chars;
+    while (true) {
+        cin >> next;
+        if (next == "end") {
+            break;
+        }
+        if (next.size() > 1) {
+            cout << "Enter characters one at a time" << endl;
+        } else {
+            chars += next[0];
+        }
+    }
+    cout << chars << endl;
+    
     return 0;
 }
